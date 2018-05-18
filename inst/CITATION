@@ -1,0 +1,11 @@
+citHeader("To cite multMDM package in publications use:")
+
+citEntry(entry="Manual",
+          title = "{multMDM}: Multivariate version of the {D}iebold-{M}ariano test",
+          author = "Krzysztof Drachal",
+          year = "2018",
+          url ="https://CRAN.R-project.org/package=multDM",
+
+          textVersion = 
+          "Drachal, K., 2018. multMDM: Multivariate version of the Diebold-Mariano test. https://CRAN.R-project.org/package=multDM"
+        ) 

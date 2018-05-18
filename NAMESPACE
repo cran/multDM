@@ -1,0 +1,6 @@
+export("d_t","DM.test","loss","MDM.selection","MDM.test","TB_MA")
+importFrom(stats,pchisq)
+importFrom(stats,pnorm)
+importFrom(stats,pt)
+importFrom(stats,sd)
+S3method(print,MDM)
