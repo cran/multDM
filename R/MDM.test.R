@@ -105,6 +105,9 @@ MDM.test <- function(realized,evaluated,q,statistic="Sc",loss.type="SE")
 ###                (useful if errors are heteroskedastic)
 ###                see S. J. Taylor, 2005. Asset Price Dynamics, Volatility, and Prediction,
 ###                Princeton University Press,
+###             "ASE" for absolute scaled error (R. J. Hyndman, A. B. Koehler, 2006,
+###               Another Look at Measures of Forecast Accuracy,
+###               International Journal of Forecasting volume 22, 679-688, 
 ###             positive numeric value for loss function of type
 ###              exp(loss*errors)-1-loss*errors
 ###              (useful when it is more costly to underpredict y than to overpredict)
@@ -134,6 +137,14 @@ loss <- function(realized,evaluated,loss.type)
           {
             e[i,] <- (as.vector(e[i,]) / as.vector(evaluated[i,]))^2
           }
+      }
+    if (loss.type=="ASE") 
+      {
+       for (i in 1:nrow(e))
+          {
+            e[i,] <- abs(as.vector(e[i,])) / mean(abs(realized-c(NA,realized[-length(realized)]))[-1])   
+          }
+       e <- e[,-1,drop=FALSE]
       }
     if (is.numeric(loss.type)) 
       {

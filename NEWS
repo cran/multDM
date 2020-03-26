@@ -1,3 +1,12 @@
+multDM ver. 1.1 (Release date: 2020-03-26)
+==============
+
+Changes:
+
+* Absolute scaled error loss function added.
+* Tiao-Box test for autocorrelation added.
+
+
 multDM ver. 1.0 (Release date: 2018-05-18)
 ==============
 

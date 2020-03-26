@@ -24,12 +24,14 @@ The function searches for correlations smaller than \eqn{-2n^{-0.5}} or higher t
 }
 
 \examples{
+\dontrun{
 data(MDMforecasts)
 ts <- MDMforecasts$ts
 forecasts <- MDMforecasts$forecasts
 l <- loss(realized=ts,evaluated=forecasts,loss.type="SE")
 d <- d_t(l)
 TB_MA(d=d,q.max=10)
+}
 }
 
 \references{

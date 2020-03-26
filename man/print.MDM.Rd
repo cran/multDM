@@ -20,6 +20,6 @@ The function prints models with outstanding predictive ability, their mean loss 
 data(MDMforecasts)
 ts <- MDMforecasts$ts
 forecasts <- MDMforecasts$forecasts
-m <- MDM.test(realized=ts,evaluated=forecasts,q=10,statistic="S",loss.type="AE")
+m <- MDM.selection(realized=ts,evaluated=forecasts,q=10,alpha=0.1,statistic="S",loss.type="AE")
 print(m)
 }

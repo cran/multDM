@@ -17,7 +17,7 @@ MDM.selection(realized,evaluated,q,alpha,statistic="Sc",loss.type="SE")
 \item{q}{\code{\link[base]{numeric}} indicating a lag length beyond which we are willing to assume that the autocorrelation of loss differentials is essentially zero}
 \item{alpha}{\code{\link[base]{numeric}} indicating a significance level for multivariate Diebold-Mariano tests}
 \item{statistic}{\code{statistic="S"} for the basic version of the test, and \code{statistic="Sc"} for the finite-sample correction, if not specified \code{statistic="Sc"} is used}
-\item{loss.type}{method to compute the loss function, \code{loss.type="SE"} will use squared errors, \code{loss.type="AE"} will use absolute errors, \code{loss.type="SPE"} will use squred proportional error (useful if errors are heteroskedastic), if \code{loss.type} will be specified as some \code{\link[base]{numeric}}, then the function of type \code{exp(loss.type*errors)-1-loss.type*errors} will be used (useful when it is more costly to underpredict \code{realized} than to overpredict), if not specified \code{loss.type="SE"} is used}
+\item{loss.type}{method to compute the loss function, \code{loss.type="SE"} will use squared errors, \code{loss.type="AE"} will use absolute errors, \code{loss.type="SPE"} will use squred proportional error (useful if errors are heteroskedastic), \code{loss.type="ASE"} will use absolute scaled error, if \code{loss.type} will be specified as some \code{\link[base]{numeric}}, then the function of type \code{exp(loss.type*errors)-1-loss.type*errors} will be used (useful when it is more costly to underpredict \code{realized} than to overpredict), if not specified \code{loss.type="SE"} is used}
 }
 
 \value{class \code{MDM} object, \code{\link[base]{list}} of 

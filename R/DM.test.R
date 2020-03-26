@@ -10,6 +10,9 @@
 ###               (useful if errors are heteroskedastic)
 ###               see S. J. Taylor, 2005. Asset Price Dynamics, Volatility, and Prediction,
 ###               Princeton University Press,
+###             "ASE" for absolute scaled error (R. J. Hyndman, A. B. Koehler, 2006,
+###               Another Look at Measures of Forecast Accuracy,
+###               International Journal of Forecasting volume 22, 679-688, 
 ###             positive numeric value for loss function of type
 ###               exp(loss*errors)-1-loss*errors
 ###               (useful when it is more costly to underpredict y than to overpredict)
@@ -48,13 +51,18 @@ DM.test <- function(f1,f2,y,loss.type="SE",h=1,c=FALSE,H1="same")
         g1 <- ((y-f1)/f1)^2
         g2 <- ((y-f2)/f2)^2
       }
+    if (loss.type=="ASE") 
+      {
+        g1 <- abs(e1[-1])/mean(abs((y-c(NA,y[-length(y)]))[-1]))
+        g2 <- abs(e2[-1])/mean(abs((y-c(NA,y[-length(y)]))[-1]))
+      }
    if (is.numeric(loss.type)) 
       {
         g1 <- exp(loss.type*e1)-1-loss.type*e1
         g2 <- exp(loss.type*e2)-1-loss.type*e2
       }
     d <- g1-g2
-    T <- length(y)
+    T <- length(d)
     dbar <- mean(d)
     gammahat <- function(k)
       {
