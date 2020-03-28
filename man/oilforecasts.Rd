@@ -37,7 +37,10 @@ The data were taken from Juvenal and Petrella (2015). They cover the period betw
 data(oilforecasts)
 ts <- oilforecasts[1,]
 forecasts <- oilforecasts[-1,]
-MDM.selection(realized=ts,evaluated=forecasts,q=8,alpha=0.1,statistic="Sc",loss.type="SE")
+l <- loss(realized=ts,evaluated=forecasts,loss.type="SE")
+d <- d_t(l)
+q <- TB_MA(d=d,q.max=4)
+MDM.selection(realized=ts,evaluated=forecasts,q=q,alpha=0.1,statistic="Sc",loss.type="SE")
 }
 
 \references{

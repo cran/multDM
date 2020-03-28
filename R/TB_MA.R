@@ -36,7 +36,7 @@ TB_MA <- function(d,q.max)
     
     C.check <- function(i)
       {
-        return(any(m1[[i]] > b || m1[[i]] < (-b)))
+        return(any(m1[[i]] > b | m1[[i]] < (-b)))
       }
     
     m2 <- unlist(lapply(seq(from=1,to=length(m1)),C.check))
