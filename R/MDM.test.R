@@ -64,7 +64,7 @@
         S <- c * S
       }
       
-    pval <- pchisq(q=S,df=nrow(d),lower.tail=TRUE)
+    pval <- pchisq(q=S,df=nrow(d),lower.tail=FALSE)
     
     names(S) <- "statistic"
     names(q) <- "lag length"
