@@ -183,36 +183,33 @@ MDM.selection <- function(realized,evaluated,q,alpha,statistic="Sc",loss.type="S
         d <- d_t(d)
         mdm <- .in.MDM.test(d=d,q=q,statistic=statistic)
         p <- mdm[[2]]$p.value
-        j <- which.max(abs(mdm[[1]]))
-        if (mdm[[1]][j]>0)
+        if (p<alpha)
           {
-            models <- models[-j]
-            j.drop <- j
+            j <- which.max(abs(mdm[[1]]))
+            if (mdm[[1]][j]>0)
+              {
+                models <- models[-j]
+                j.drop <- j
+              }
+            else
+              {
+                models <- models[-(j+1)]
+                j.drop <- j+1
+              }
+            e <- e[-j.drop,,drop=FALSE]
+            models <- (1:nrow(e))
           }
-        else
-          {
-            models <- models[-(j+1)]
-            j.drop <- j+1
-          }
-        e <- e[-j.drop,,drop=FALSE]
-        models <- (1:nrow(e))
       }
-    
+          
     n.mods <- n.mods - nrow(e)
     ret <- matrix(NA,ncol=3,nrow=nrow(e))
     rownames(ret) <- rownames(e)
-    if (j.drop==(nrow(e)+1))
-      {
-        ret[,2] <- mdm[[1]][-j.drop]
-        ret[,1] <- sort(ret[,2],index.return=TRUE)$ix
-      }
-    else
-      {
-        ret[-nrow(ret),2] <- mdm[[1]][-j.drop]
-        ret[-nrow(ret),1] <- sort(ret[-nrow(ret),2],index.return=TRUE)$ix
-      }
+       
+    ret[-nrow(ret),2] <- mdm[[1]]
+    ret[-nrow(ret),1] <- rank(abs(ret[-nrow(ret),2]))
     ret[,3] <- rowMeans(loss(realized=realized,evaluated=e,loss.type=loss.type))
-    colnames(ret) <- c("Rank",statistic,"Mean loss")
+
+    colnames(ret) <- c("Rank","s","Mean loss")
 
     ret <- list(ret,as.numeric(p),alpha,n.mods)
     names(ret) <- c("outcomes","p.value","alpha","eliminated")
