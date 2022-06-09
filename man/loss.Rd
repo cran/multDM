@@ -32,5 +32,5 @@ Hyndman, R.J., Koehler, A.B. 2006. Another look at measures of forecast accuracy
 
 Taylor, S. J., 2005. \emph{Asset Price Dynamics, Volatility, and Prediction},  Princeton University Press.
 
-Triacca, U., 2018. \emph{Comparing Predictive Accuracy of Two Forecasts}, \url{http://www.phdeconomics.sssup.it/documents/Lesson19.pdf}.
+Triacca, U., 2018. \emph{Comparing Predictive Accuracy of Two Forecasts}, \url{https://www.lem.sssup.it/phd/documents/Lesson19.pdf}.
 }

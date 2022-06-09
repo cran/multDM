@@ -1,6 +1,6 @@
-9356b611d42c5954110fbda0ce6fb6c3 *DESCRIPTION
+4b0d117e5ddcfa67640bd0b935dad4d6 *DESCRIPTION
 cf336880d67c9fbfad4f0df9e9123735 *NAMESPACE
-d1babc07ef725026339fef00f1635cac *NEWS
+559ef50b1d3ac2753d9efa9f06e11bf3 *NEWS
 246c539b813c9f08da7858d21bc64b03 *R/DM.test.R
 dd3210f03dab593c534ef3950254a2bb *R/MDM.test.R
 e1df146517551d12ad2ccfae42c26f60 *R/TB_AR_test.R
@@ -8,13 +8,13 @@ e1df146517551d12ad2ccfae42c26f60 *R/TB_AR_test.R
 1fefb4d5759e5170141b3f2f12913ea7 *data/MDMforecasts.RData
 d63482d1b174a948efc7804d0702e4ba *data/oilforecasts.RData
 59c635823856662ec458429073e7b3c3 *inst/CITATION
-a0505f5cd563075ee0a1a6bf163b82a2 *man/DM.test.Rd
+84e3e3f50f165d2818548d12595d5021 *man/DM.test.Rd
 a625a6327c36ad462e6d54e8419e85d3 *man/MDM.selection.Rd
 eff2ca80650d1de532bd692f9fa5e164 *man/MDM.test.Rd
 35f51bc5bfafa8a86fadf12d5d8e52e0 *man/MDMforecasts.Rd
 6e261c99ab65d5f63499ccd11594e955 *man/TB_AR_test.Rd
 ed94b0b8afe66535be3973f9c28de98b *man/TB_MA.Rd
 852328bdfa099289364fb7ce82a26783 *man/d_t.Rd
-fd0cfbe6fee13907a6483c4ce25f6368 *man/loss.Rd
+f0aa9b48bd2846bb1b13f806647f665a *man/loss.Rd
 46b52e0881fe89d31dd8b79dd7756de5 *man/oilforecasts.Rd
 4733f40b4e344a0393a716cd6a1295fb *man/print.MDM.Rd
