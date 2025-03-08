@@ -68,7 +68,7 @@ DM.test <- function(f1,f2,y,loss.type="SE",h=1,c=FALSE,H1="same")
       {
         temp1 <- d-dbar
         temp2 <- rep(NA,abs(k))
-        temp2 <- c(temp2,temp1)
+        temp2 <- c(temp2,d)
         temp2 <- temp2[1:T]
         temp2 <- temp2-dbar
         temp <- temp1*temp2

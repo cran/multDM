@@ -1,9 +1,9 @@
 Package: multDM
 Type: Package
 Title: Multivariate Version of the Diebold-Mariano Test
-Version: 1.1.4
+Version: 1.1.5
 Imports: MTS
-Date: 2022-06-09
+Date: 2025-03-08
 Authors@R: person("Krzysztof", "Drachal", role = c("aut","cre"), email="kdrachal@wne.uw.edu.pl", comment = "Faculty of Economic Sciences, University of Warsaw, Poland")
 Author: Krzysztof Drachal [aut, cre] (Faculty of Economic Sciences, University
     of Warsaw, Poland)
@@ -15,6 +15,6 @@ URL: https://CRAN.R-project.org/package=multDM
 Note: Research funded by the Polish National Science Centre grant under
         the contract number DEC-2015/19/N/HS4/00205.
 NeedsCompilation: no
-Packaged: 2022-06-09 09:24:29 UTC; Krzysiek
+Packaged: 2025-03-08 21:16:46 UTC; Krzysiek
 Repository: CRAN
-Date/Publication: 2022-06-09 09:50:08 UTC
+Date/Publication: 2025-03-08 21:30:02 UTC
